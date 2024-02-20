@@ -13,4 +13,9 @@
     width: 100%;
     border: none;
 }
-
+.btn {
+    background-color: pink;
+}
+.btn:hover {
+    background-color: pink;
+}

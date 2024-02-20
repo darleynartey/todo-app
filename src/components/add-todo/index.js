@@ -16,7 +16,6 @@ function AddTodo() {
         setTodo(event.target.value);
     }
 
-    const collectInput = (event) =>  setTodo(event.target.value);
 
 
     function saveTodo(event){
@@ -34,7 +33,7 @@ function AddTodo() {
              onChange={collectInput}
              className={styles.addTodoInput}
              placeholder="Start typing..."/>
-            <button onClick={saveTodo}>Create</button>
+            <button className={`btn ${styles.btn}` }onClick={saveTodo}>Create</button>
         </section>
     );
 }
