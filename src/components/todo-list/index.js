@@ -1,4 +1,5 @@
 import{useLocalStorage} from "usehooks-ts";
+import TodoItem from "../todo-item";
 
 
 
@@ -13,7 +14,9 @@ function TodoList() {
     //     //Update React State
     //     setTodos(todos);
 
-
+     function deleteAll() {
+        setTodos([]);
+     }
 
 
     // }
@@ -22,12 +25,15 @@ function TodoList() {
 
 
     return (
-        <ul>
+        <section>
+            <button onClick={deleteAll} className="btn btn-danger">Delete All</button>
+            <ul className="list-group">
             {todos.map(function(todo, index) {
-                return <li key={index}>{todo}</li>
+               return <TodoItem  todo={todo} index="index"/>
             })}
 
         </ul>
+        </section>
     );
 }
 
